@@ -10,6 +10,7 @@
         <th>Season</th>
         <th>Average</th>
         <th>Weignt</th>
+        <th>Actions</th>
       </tr>
       <tr v-for="fruit,index in fruits" :key="index">
         <td>{{ index +1}}</td>
@@ -19,6 +20,8 @@
         <td>{{ fruit.season }}</td>
         <td>{{ fruit.averageWeight }} </td>
         <td>{{ fruit.averageWeight }} </td>
+        <td><button @click="showMore">Show More</button>
+        <button @click="close">Close</button></td>
       </tr>
     </table>
   </div>
@@ -27,6 +30,7 @@
 export default {
   data() {
     return {
+        status: true,
       fruits: [
         {
           name: "Apple",
@@ -101,6 +105,10 @@ export default {
       ],
     };
   },
+
+  methods:{
+    
+  }
 };
 </script>
 <style>

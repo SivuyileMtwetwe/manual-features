@@ -2,7 +2,8 @@
   <div class="about">
     <h1>This is an about page</h1>
   </div>
-  <CardComp text="Sivuyile"/>
+
+  <CardComp text="Sivuyile" :obj="object" :fx="display"/>
 </template>
 
 <script>
@@ -21,7 +22,15 @@ data(){
       favSport: "Cricket"
     }
   }
+},
+
+methods:{
+  display(){
+    alert("Button was pressed")
+  }
 }
+
+
 }
 </script>
 <style lang="">
