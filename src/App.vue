@@ -5,6 +5,7 @@
     <router-link to="/fruits">Fruits</router-link>|
     <router-link to="/contact">Contact</router-link>|
     <router-link to="/login">Log in</router-link>|
+    <router-link to="/friends">Friends</router-link>
 
 
   </nav>

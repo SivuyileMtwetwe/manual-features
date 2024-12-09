@@ -5,6 +5,7 @@ import ContactView from '@/views/ContactView.vue'
 import LoginView from '@/views/LoginView.vue'
 import SigninComp from '@/components/SigninComp.vue'
 import SignupComp from '@/components/SignupComp.vue'
+import FriendsView from '@/views/FriendsView.vue'
 
 const routes = [
   {
@@ -43,6 +44,11 @@ const routes = [
     path: "/signup",
     name: "signup",
     component: SignupComp
+  },
+  {
+    path: '/friends',
+    name: 'friends',
+    component: FriendsView
   }
 ]
 

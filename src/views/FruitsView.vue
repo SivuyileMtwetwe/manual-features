@@ -19,7 +19,7 @@
         <td>{{ fruit.season }}</td>
         <td>{{ fruit.averageWeight }}</td>
         <td>
-          <button v-if="status !== index" @click="showMore(index)">
+          <button   v-if="status !== index" @click="showMore(index)">
             Show More
           </button>
           <button v-else @click="close">Close</button>
@@ -28,15 +28,16 @@
     </table>
 
 
-    <div v-if="status !== null">
-     <p>A/an {{ fruits[status].name }} is {{ fruits[status].color }} in color, it has a 
-        {{ fruits[status].taste }} taste and is only grows in
+    <div v-if="status !== true" class="modal-content">
+     <h1>A/an {{ fruits[status].name }} is {{ fruits[status].color }} in color, it has a 
+        {{ fruits[status].taste }} taste and it only grows in
         {{ fruits[status].season }} and is approximately 
-        {{ fruits[status].averageWeight }} in weight</p>   
+        {{ fruits[status].averageWeight }} in weight</h1>   
 
         
         
     </div>
+    
   </div>
 </template>
 
@@ -44,7 +45,7 @@
 export default {
   data() {
     return {
-      status: null,
+      status: true,
       fruits: [
         {
           name: "Apple",
@@ -124,13 +125,13 @@ export default {
       this.status = index;
     },
     close() {
-      this.status = null;
+      this.status = true;
     },
   },
 };
 </script>
 
-<style scoped>
+<style >
 table {
   margin: auto;
   /* display: inline;
@@ -144,5 +145,13 @@ th,
 tr,
 td {
   border: 1px solid black;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
 }
 </style>
